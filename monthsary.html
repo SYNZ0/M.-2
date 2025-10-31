@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Monthsary!</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#story">Our Story</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#messages">Messages</a></li>
+        </ul>
+    </nav>
+    
+    <section id="home">
+        <video autoplay muted loop id="home-video">
+            <source src="videos/353759451996efc92625cba93f594564.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="overlay">
+            <h1>Happy Monthsary!</h1>
+        </div>
+    </section>
+    
+    <section id="story">
+        <video autoplay muted loop id="story-video">
+            <source src="videos/5947b7debdacf9437e16062dd8979b7e.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="story-content">
+            <h2>Our Story</h2>
+            <p>From the moment we met, it was like a beautiful tulip blooming in spring. Our journey has been filled with love, laughter, and unforgettable moments. Here's to many more months together!</p>
+            <img src="tulips.svg" alt="Tulip" class="tulip-corner top-left">
+            <img src="tulips.svg" alt="Tulip" class="tulip-corner bottom-right">
+        </div>
+    </section>
+    
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-grid">
+            <a href="placeholder1.jpg" data-lightbox="gallery"><img src="placeholder1.jpg" alt="Memory 1"></a>
+            <a href="placeholder2.jpg" data-lightbox="gallery"><img src="placeholder2.jpg" alt="Memory 2"></a>
+            <a href="placeholder3.jpg" data-lightbox="gallery"><img src="placeholder3.jpg" alt="Memory 3"></a>
+            <!-- Add more images as needed -->
+        </div>
+    </section>
+    
+    <section id="messages">
+        <h2>Leave a Message</h2>
+        <form id="message-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <textarea id="message" placeholder="Your Wishes" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <div id="messages-list"></div>
+        <img src="tulips.svg" alt="Tulip" class="tulip-motif">
+    </section>
+    
+    <footer>
+        <div class="social-icons">
+            <a href="#"><img src="instagram.svg" alt="Instagram"></a>
+            <a href="#"><img src="facebook.svg" alt="Facebook"></a>
+        </div>
+        <p>&copy; 2023 Happy Monthsary. All rights reserved.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #ffe6f0;
+}
+
+/* Navigation Bar */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ff69b4;
+    z-index: 1000;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+}
+nav a:hover {
+    background-color: #ffb6c1;
+}
+
+/* Homepage */
+#home {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+#home-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 182, 193, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.overlay h1 {
+    font-size: 3em;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Our Story */
+#story {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+#story-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.story-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    background-color: rgba(255, 105, 180, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+}
+.tulip-corner {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+}
+.top-left { top: 10px; left: 10px; }
+.bottom-right { bottom: 10px; right: 10px; }
+
+/* Gallery */
+#gallery {
+    padding: 50px;
+    text-align: center;
+}
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+.gallery-grid img {
+    width: 100%;
+    border: 5px solid #ff69b4;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* Messages */
+#messages {
+    padding: 50px;
+    background-color: #ffe6f0;
+    text-align: center;
+}
+#message-form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #ff69b4;
+    border-radius: 5px;
+}
+button {
+    background-color: #ff69b4;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: #ffb6c1;
+}
+.tulip-motif {
+    width: 100px;
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #ff69b4;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+.social-icons a {
+    margin: 0 10px;
+}
+.social-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .overlay h1 { font-size: 2em; }
+    nav ul { flex-direction: column; }
+    .gallery-grid { grid-template-columns: 1fr; }
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s, transform 1s;
+}
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
